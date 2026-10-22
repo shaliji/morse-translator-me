@@ -1,0 +1,49 @@
+{
+  "name": "morse-translator-me",
+  "version": "1.0.0",
+  "description": "Zero-dependency Morse code encoder/decoder with the full ITU-R M.1677-1 table, opt-in Spanish extended letters and honest warnings. Powers https://morsetranslator.me.",
+  "keywords": [
+    "morse",
+    "morse-code",
+    "morse-code-translator",
+    "translator",
+    "encoder",
+    "decoder",
+    "telegraph",
+    "cw",
+    "ham-radio"
+  ],
+  "license": "MIT",
+  "author": "morsetranslator.me",
+  "homepage": "https://morsetranslator.me/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaliji/morse-translator-me.git"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json && mv dist/cjs/index.js dist/index.cjs && rm -rf dist/cjs",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
