@@ -1,5 +1,7 @@
 # morse-translator-me
 
+[![npm version](https://img.shields.io/npm/v/morse-translator-me)](https://www.npmjs.com/package/morse-translator-me) [![npm downloads](https://img.shields.io/npm/dm/morse-translator-me)](https://www.npmjs.com/package/morse-translator-me) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+
 Zero-dependency Morse code encoder/decoder for TypeScript and JavaScript. This is the engine that powers **[morsetranslator.me](https://morsetranslator.me/)** — a free Morse code translator, generator and audio decoder.
 
 - **Full ITU-R M.1677-1 table** — 26 letters, 10 digits, 18 punctuation marks, all collision-free.
